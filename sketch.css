@@ -1,7 +1,51 @@
-.gridRow {
-    border: 1px solid black;
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.cell {
-    border: 1px solid black;
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Resize Button */
+#resize-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Container Styling */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px; /* Total width of the grid */
+    height: 960px; /* Total height of the grid */
+    border: 2px solid #333;
+}
+
+/* Grid Squares */
+.grid-square {
+    flex: 1 0 6.25%; /* For 16 squares per row: 100 / 16 = 6.25% */
+    height: 6.25%; /* Maintain square shape */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* Hover Effect */
+.grid-square.hovered {
+    background-color: #3498db; /* Change to desired color */
 }
